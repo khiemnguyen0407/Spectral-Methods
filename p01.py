@@ -1,10 +1,12 @@
 """
 Convergence of second-order and fourth-order differences
 """
+# %%
 from scipy.sparse import coo_matrix
 import numpy as np
 import matplotlib.pyplot as plt
 # For various N, set up grid in [-pi, pi] and function u(x)
+# %%
 Nvec = 2**np.arange(3, 13)
 for N in Nvec:
     h = 2*np.pi / N
@@ -29,7 +31,8 @@ for N in Nvec:
     error2 = np.linalg.norm(D2.dot(u) - uprime, ord = np.inf)
     plt.loglog(N, error4, 'r.', markersize=8)
     plt.loglog(N, error2, 'bs', markersize=4)
-    
+
+# %%
 plt.grid(True)
 plt.xlabel(r'$N$', fontsize=18)
 plt.ylabel('error', fontsize=18)
