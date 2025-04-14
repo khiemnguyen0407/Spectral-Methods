@@ -40,3 +40,6 @@ plt.title('Convergence of 4th-order finite differences')
 plt.semilogy(Nvec, Nvec ** (-4.0), 'r--')
 plt.semilogy(Nvec, Nvec ** (-2.0), 'b--')
 plt.text(105, 5e-8, r'$N^{-4}$', fontsize=18)
+
+# %%
+plt.show()
