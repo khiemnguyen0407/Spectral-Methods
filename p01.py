@@ -7,6 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 # For various N, set up grid in [-pi, pi] and function u(x)
 # %%
+# Add comment here
 Nvec = 2**np.arange(3, 13)
 for N in Nvec:
     h = 2*np.pi / N
