@@ -37,7 +37,7 @@ for N = Nvec
     %%
     subplot(2,2,4)
     loglog(N, error2, '.', 'markersize', 15), hold on
-    grid on, xlabel N, ylabel error
+    grid on; xlabel N; ylabel error
     title('Convergence of 4th-order finite differences');
     semilogy(Nvec,Nvec.^(-4), 'k--');
     text(105, 5e-8, 'N^{-4}', 'fontsize', 18);
@@ -48,6 +48,7 @@ for N = Nvec
     end
 end
 
+%% 
 subplot(2,2,1)
 N = 2^8; h = 2*pi/N;
 xx = -pi + (1:N)' * h;

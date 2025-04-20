@@ -21,7 +21,8 @@ for N in Nvec:
     e2 = np.append(e1[1:], e1[0])
     e3 = np.append(e1[2:], e1[0:2])
     
-    D4 = coo_matrix((2*e/3, (e1, e2)), shape=(N,N)) - coo_matrix((e/12, (e1, e3)), shape=(N,N))
+    D4 = coo_matrix((2*e/3, (e1, e2)), shape=(N,N)) \
+        - coo_matrix((e/12, (e1, e3)), shape=(N,N))
     D4 = (D4 - D4.T)/h
     
     D2 = coo_matrix((0.5*e, (e1, e2)), shape=(N,N))
@@ -30,7 +31,7 @@ for N in Nvec:
     # Plot max(abs(D4*u - uprime))
     error4 = np.linalg.norm(D4.dot(u) - uprime, ord = np.inf)
     error2 = np.linalg.norm(D2.dot(u) - uprime, ord = np.inf)
-    plt.loglog(N, error4, 'r.', markersize=8)
+    plt.loglog(N, error4, 'ro', markersize=4)
     plt.loglog(N, error2, 'bs', markersize=4)
 
 # %%
