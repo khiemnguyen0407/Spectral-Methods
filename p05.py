@@ -1,5 +1,8 @@
 """
-Repetition of p4.m via FFT
+Repetition of p04.py via FFT 
+    adapted from Trefethen, Spectral Methods in MATLAB
+    
+@author: Khiem Nguyen
 """
 
 import numpy as np

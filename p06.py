@@ -14,12 +14,12 @@ from matplotlib.collections import LineCollection
 N = 2**7; h = 2*np.pi/N; x = np.linspace(h, 2*np.pi, N)
 t = 0.0; dt = h/4.0
 c = 0.2 + np.sin(x - 1) ** 2
-v = np.exp(-100 * (x - 1)**2);
+v = np.exp(-100 * (x - 1)**2)
 vold = np.exp(-100 * (x - 0.2*dt -1)**2)
 
 # Time-stepping by leap-frog formula
 tmax = 8.0; tplot = 0.2
-plotgap = int(round(tplot/dt)); dt = tplot/plotgap;
+plotgap = int(round(tplot/dt)); dt = tplot/plotgap
 nplots = int(round(tmax/tplot))
 tdata = np.zeros(nplots+1)
 data = []
